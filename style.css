@@ -1,0 +1,96 @@
+:root {
+  --white: #ffffff;
+  --light-grey: #575757;
+  --dark-grey: #3d3d3d;
+  --yellow: #fbd144;
+  --light-background: #e9ebec;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap');
+
+body {
+  background-color: var(--light-background);
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* estilos para el selector de modo */
+header {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px 0;
+}
+
+.mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  width: 80px;
+  height: 80px;
+  border: #e7e7e7 solid 1px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mode > input {
+  position: absolute;
+  opacity: 0;
+}
+
+.moon {
+  font-size: 2em;
+  color: var(--dark-grey);
+}
+
+/*Estilos grid about me*/
+#aboutme{
+  display: flex;
+  justify-content: center;
+}
+
+.aboutme-grid{
+  width: 30%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto;
+}
+
+.photo{
+  width:125px;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: var(--yellow) solid 3px;
+}
+
+
+.photo > img {
+  width:95%;
+  height: 95%;
+  border-radius: 50%;
+}
+
+/* Estilos generales para dispositivos móviles */
+@media only screen and (max-width: 767px) {
+  /* estilos para el selector de modo */
+
+  .mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    width: 48px;
+    height: 48px;
+    border: #e7e7e7 solid 1px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .moon {
+    font-size: 1.5em;
+    color: var(--dark-grey);
+  }
+
+}
