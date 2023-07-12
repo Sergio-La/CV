@@ -1,6 +1,7 @@
 :root {
   --white: #ffffff;
   --light-grey: #575757;
+  --light-light-grey:#D7D7D7;
   --dark-grey: #3d3d3d;
   --yellow: #fbd144;
   --light-background: #e9ebec;
@@ -139,6 +140,80 @@ header {
   color: var(--light-grey);
   text-align: center;
 }
+
+/*Estilos cv-contacme*/
+#cv-contact {
+  display: flex;
+  justify-content: center;
+}
+
+.cv-contact-flex {
+  width: 35rem;
+  margin: 2em 0;
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  font-size: 1.5em;
+  color: var(--dark-grey);
+  text-align: center;
+}
+
+.download-cv{
+  width: 15em;
+  height: 3em;
+  background-color: var(--yellow);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.contacme{
+  width: 15em;
+  height: 3em;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+/*Estilos para el selector del protafolio y las skills*/
+#portfolio-skills {
+  display: flex;
+  justify-content: center;
+
+}
+
+.portfolio-skills-flex {
+  background-color: var(--white);
+  border-radius: 10px;
+  width: 40rem;
+  margin: 2em 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 38px;
+  font-size: 1.5em;
+  color: var(--dark-grey);
+  text-align: center;
+}
+
+.portfolio {
+  width: 42%;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0.8em 0;
+}
+
+.portfolio-active{
+  background-color: var(--light-light-grey);
+}
+
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   /* Estilos para tabletas y pantallas más grandes */
