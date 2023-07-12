@@ -1,7 +1,7 @@
 :root {
   --white: #ffffff;
   --light-grey: #575757;
-  --light-light-grey:#D7D7D7;
+  --light-light-grey: #d7d7d7;
   --dark-grey: #3d3d3d;
   --yellow: #fbd144;
   --light-background: #e9ebec;
@@ -71,11 +71,12 @@ header {
   color: var(--dark-grey);
 }
 
-/*Estilos grid about me*/
-#aboutme {
+section {
   display: flex;
   justify-content: center;
 }
+
+/*Estilos grid about me*/
 
 .aboutme-flex {
   width: 35em;
@@ -125,14 +126,9 @@ header {
 
 /*Estilos sección experiencia*/
 
-#experience {
-  display: flex;
-  justify-content: center;
-}
-
 .experience-flex {
   width: 35rem;
-  margin: 2em 0;
+  margin: 1.5em 0;
   display: flex;
   justify-content: center;
   gap: 90px;
@@ -149,7 +145,7 @@ header {
 
 .cv-contact-flex {
   width: 35rem;
-  margin: 2em 0;
+  margin: 1.5em 0;
   display: flex;
   justify-content: center;
   gap: 38px;
@@ -158,18 +154,8 @@ header {
   text-align: center;
 }
 
-.download-cv{
-  width: 15em;
-  height: 3em;
-  background-color: var(--yellow);
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
-}
-
-.contacme{
+.download-cv {
+  cursor: pointer;
   width: 15em;
   height: 3em;
   background-color: var(--white);
@@ -180,12 +166,11 @@ header {
   gap: 1em;
 }
 
-/*Estilos para el selector del protafolio y las skills*/
-#portfolio-skills {
-  display: flex;
-  justify-content: center;
-
+.download-cv-active {
+  background-color: var(--yellow);
 }
+
+/*Estilos para el selector del protafolio y las skills*/
 
 .portfolio-skills-flex {
   background-color: var(--white);
@@ -201,6 +186,7 @@ header {
 }
 
 .portfolio {
+  cursor: pointer;
   width: 42%;
   height: 3em;
   display: flex;
@@ -210,9 +196,12 @@ header {
   margin: 0.8em 0;
 }
 
-.portfolio-active{
+.portfolio-active {
   background-color: var(--light-light-grey);
 }
+
+
+/*Estilos para la sección de skills y proyectos*/
 
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
