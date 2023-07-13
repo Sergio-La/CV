@@ -10,13 +10,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Selector de modo -->
     <header>
       <label class="mode">
         <input type="checkbox" />
+        <ion-icon name="sunny" class="sun"></ion-icon>
         <ion-icon name="moon" class="moon"></ion-icon>
+        <span class="toggle"></span>
       </label>
     </header>
 
+    <!-- Sección sobre mi -->
     <section id="aboutme">
       <div class="aboutme-flex">
         <div class="photo">
@@ -44,6 +48,7 @@
       </div>
     </section>
 
+    <!-- Sección experiencia -->
     <section id="experience">
       <div class="experience-flex">
         <div class="div-experience"><span>+1.5 años de experiencia</span></div>
@@ -51,28 +56,26 @@
         <div class="customers-satisfied">+5 clientes satisfechos</div>
       </div>
     </section>
-
+    <!-- Sección para los botones descargar hoja de vida y contacto -->
     <section id="cv-contact">
       <div class="cv-contact-flex">
         <div class="download-cv download-cv-active">
-          <span>Download</span>   <img src="./images/download.png" alt="descargar" >       
+          <span>Download</span>
+          <img src="./images/download.png" alt="descargar" />
         </div>
         <div class="download-cv">Contacme</div>
       </div>
     </section>
 
+    <!-- Sección para los botones de proyecto y skills -->
     <section id="portfolio-skills">
       <div class="portfolio-skills-flex">
-        <div id="portfolio" class="portfolio portfolio-active">
-          Portfolio
-        </div>
-        <div id="skills" class="portfolio">
-          Skills
-        </div>
+        <div id="portfolio" class="portfolio portfolio-active">Portfolio</div>
+        <div id="skills" class="portfolio">Skills</div>
       </div>
     </section>
-    
-    
+
+    <!-- Sección para los proyectos y skills -->
     <section id="proyects-skills">
       <div class="proyects-skills-flex">
         <!-- Aquí va el contenido dinámico -->

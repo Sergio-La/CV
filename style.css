@@ -53,7 +53,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--white);
+  /* background-color: var(--white); */
   width: 80px;
   height: 80px;
   border: #e7e7e7 solid 1px;
@@ -66,11 +66,48 @@ header {
   opacity: 0;
 }
 
+.sun {
+  position: absolute;
+  font-size: 2em;
+  color: var(--white);
+  transform: scale(1);
+  transition: 1s ease;
+  transition-delay: 0.2s;
+}
+
+input:checked ~ .sun {
+  transform: scale(0) rotate(360deg);
+}
+
 .moon {
   font-size: 2em;
   color: var(--dark-grey);
+
+  transform: scale(0);
+  transition: 1s ease;
+  transition-delay: 0.2s;
 }
 
+input:checked ~ .moon {
+  transform: scale(1) rotate(360deg);
+}
+
+.toggle {
+  position: absolute;
+  display: block;
+  background-color: var(--dark-grey);
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  transition: 1s;
+  z-index: -1;
+}
+
+input:checked ~ .toggle {
+  background-color: var(--white);
+}
+
+/*Estilo para todas las secciones*/
 section {
   display: flex;
   justify-content: center;
@@ -200,9 +237,7 @@ section {
   background-color: var(--light-light-grey);
 }
 
-
 /*Estilos para la sección de skills y proyectos*/
-
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   /* Estilos para tabletas y pantallas más grandes */
