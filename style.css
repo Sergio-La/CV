@@ -40,6 +40,13 @@
 body {
   background-color: var(--light-background);
   font-family: "Poppins", sans-serif;
+  transition: 1s;
+}
+
+/*Modo oscuro body*/
+.body-dark {
+  background-color: var(--light-grey);
+  transition: 1s;
 }
 
 /* estilos para el selector de modo */
@@ -70,32 +77,33 @@ header {
   position: absolute;
   font-size: 2em;
   color: var(--white);
-  transform: scale(1);
+  transform: scale(0);
   transition: 1s ease;
   transition-delay: 0.2s;
 }
 
 input:checked ~ .sun {
-  transform: scale(0) rotate(360deg);
+  transform: scale(1) rotate(360deg);
 }
 
 .moon {
   font-size: 2em;
   color: var(--dark-grey);
 
-  transform: scale(0);
+  transform: scale(1);
   transition: 1s ease;
   transition-delay: 0.2s;
 }
 
 input:checked ~ .moon {
-  transform: scale(1) rotate(360deg);
+  transform: scale(0) rotate(360deg);
 }
 
 .toggle {
   position: absolute;
   display: block;
-  background-color: var(--dark-grey);
+  background-color: var(--white);
+
   width: 80px;
   height: 80px;
   border-radius: 50px;
@@ -104,7 +112,7 @@ input:checked ~ .moon {
 }
 
 input:checked ~ .toggle {
-  background-color: var(--white);
+  background-color: var(--dark-grey);
 }
 
 /*Estilo para todas las secciones*/
@@ -143,15 +151,28 @@ section {
   padding: 4em 0;
 }
 
-.inf > h4 {
+.name {
   color: var(--dark-grey);
   font-size: 3em;
   font-weight: 400;
+  transition: 1s;
 }
 
-.inf > h5 {
+/*Modo oscuro*/
+.name-dark {
+  color: var(--light-background);
+  transition: 1s;
+}
+
+.title {
   color: var(--light-grey);
   font-size: 1.5em;
+  transition: 1s;
+}
+
+.title-dark {
+  color: var(--light-light-grey);
+  transition: 1s;
 }
 
 .redes {
@@ -160,6 +181,33 @@ section {
   justify-content: start;
   gap: 10px;
 }
+
+
+/* .sun {
+  position: absolute;
+  font-size: 2em;
+  color: var(--white);
+  transform: scale(0);
+  transition: 1s ease;
+  transition-delay: 0.2s;
+}
+
+input:checked ~ .sun {
+  transform: scale(1) rotate(360deg);
+}
+
+.moon {
+  font-size: 2em;
+  color: var(--dark-grey);
+
+  transform: scale(1);
+  transition: 1s ease;
+  transition-delay: 0.2s;
+}
+
+input:checked ~ .moon {
+  transform: scale(0) rotate(360deg);
+} */
 
 /*Estilos sección experiencia*/
 
@@ -235,6 +283,28 @@ section {
 
 .portfolio-active {
   background-color: var(--light-light-grey);
+}
+
+/*Estilos para los proyectos y skills*/
+.projects-skills-flex {
+  display: grid;
+  grid-template-columns: 16em 16em;
+  grid-template-rows: 8em 8em;
+  column-gap: 2em;
+  row-gap: 2.2em;
+  margin: 2em 0;
+}
+
+.project {
+  background-color: var(--white);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.project > h1 {
+  font-weight: 400;
+  font-size: 1.4em;
+  margin: 0.5em 0;
 }
 
 /*Estilos para la sección de skills y proyectos*/
