@@ -182,33 +182,6 @@ section {
   gap: 10px;
 }
 
-
-/* .sun {
-  position: absolute;
-  font-size: 2em;
-  color: var(--white);
-  transform: scale(0);
-  transition: 1s ease;
-  transition-delay: 0.2s;
-}
-
-input:checked ~ .sun {
-  transform: scale(1) rotate(360deg);
-}
-
-.moon {
-  font-size: 2em;
-  color: var(--dark-grey);
-
-  transform: scale(1);
-  transition: 1s ease;
-  transition-delay: 0.2s;
-}
-
-input:checked ~ .moon {
-  transform: scale(0) rotate(360deg);
-} */
-
 /*Estilos sección experiencia*/
 
 .experience-flex {
@@ -220,6 +193,12 @@ input:checked ~ .moon {
   font-size: 1.5em;
   color: var(--light-grey);
   text-align: center;
+  transition: 1s;
+}
+
+.experience-flex-dark {
+  color: var(--light-light-grey);
+  transition: 1s;
 }
 
 /*Estilos cv-contacme*/
@@ -249,10 +228,16 @@ input:checked ~ .moon {
   justify-content: center;
   align-items: center;
   gap: 1em;
+  transition: 0.6s;
+}
+
+.download-cv:hover{
+  background-color: #fbd760ba;
 }
 
 .download-cv-active {
   background-color: var(--yellow);
+  transition: 0.6s;
 }
 
 /*Estilos para el selector del protafolio y las skills*/
