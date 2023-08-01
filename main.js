@@ -13,12 +13,10 @@ const icoLink = document.querySelector(".redes :nth-child(2)");
 const divExperience = document.querySelector(".experience-flex");
 /*botón del dowload-cv*/
 const btnDowCont = document.querySelectorAll(".download-cv");
-/*botón del contacme*/
+/*Fondo portafolio habilidades*/
+const backgrounPortfolioSkills = document.querySelector(".portfolio-skills-flex");
 
 btnMode.addEventListener("click", toggleMode);
-btnDowCont[0].addEventListener("click", downloadCv);
-btnDowCont[1].addEventListener("click", contacme);
-
 
 /*Función para el selector de modo*/
 function toggleMode() {
@@ -34,25 +32,10 @@ function toggleMode() {
     icoLink.src = "./images/link.svg"
   }
   divExperience.classList.toggle('experience-flex-dark');
-}
-
-function downloadCv() {
-  if (btnDowCont[0].classList.contains("download-cv-active")) {
-    btnDowCont[0].classList.remove("download-cv-active");
-  } else if(!btnDowCont[0].classList.contains("download-cv-active" && btnDowCont[1].classList.contains("download-cv-active"))) {
-    btnDowCont[0].classList.add("download-cv-active");
-    btnDowCont[1].classList.remove("download-cv-active");
-
-  }
-
-}
-
-function contacme() {
-  if (btnDowCont[1].classList.contains("download-cv-active")) {
-    btnDowCont[1].classList.remove("download-cv-active");
-  } else if(!btnDowCont[1].classList.contains("download-cv-active" && btnDowCont[0].classList.contains("download-cv-active"))){
-    btnDowCont[1].classList.add("download-cv-active");
-    btnDowCont[0].classList.remove("download-cv-active");
-
-  }
+  //cambiar de color a los botones contacme y download
+  btnDowCont[0].classList.toggle('download-cv-dark');
+  btnDowCont[1].classList.toggle('download-cv-dark');
+  //cambiar el color de fondo de la sección de portafolio y habilidades
+  backgrounPortfolioSkills.classList.toggle('portfolio-skills-flex-dark')
+  
 }

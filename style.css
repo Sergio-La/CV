@@ -5,6 +5,8 @@
   --dark-grey: #3d3d3d;
   --yellow: #fbd144;
   --light-background: #e9ebec;
+  --blue-dark: #0C151D;
+  --blue-gray:#171F26;
 }
 
 @font-face {
@@ -45,7 +47,7 @@ body {
 
 /*Modo oscuro body*/
 .body-dark {
-  background-color: var(--light-grey);
+  background-color: var(--blue-dark);
   transition: 1s;
 }
 
@@ -60,10 +62,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: var(--white); */
   width: 80px;
   height: 80px;
-  border: #e7e7e7 solid 1px;
+  /* border: #e7e7e7 solid 1px; */
   border-radius: 50%;
   cursor: pointer;
 }
@@ -89,7 +90,6 @@ input:checked ~ .sun {
 .moon {
   font-size: 2em;
   color: var(--dark-grey);
-
   transform: scale(1);
   transition: 1s ease;
   transition-delay: 0.2s;
@@ -112,7 +112,7 @@ input:checked ~ .moon {
 }
 
 input:checked ~ .toggle {
-  background-color: var(--dark-grey);
+  background-color: var(--blue-gray);
 }
 
 /*Estilo para todas las secciones*/
@@ -233,12 +233,22 @@ section {
 
 .download-cv:hover{
   background-color: #fbd760ba;
+  color: var(--blue-dark);
 }
 
-.download-cv-active {
+.download-cv:active{
+  background-color: var(--yellow) ;
+}
+
+.download-cv-dark {
+  background-color: var(--blue-gray);
+  color: var(--light-light-grey);
+}
+
+/* .download-cv-active {
   background-color: var(--yellow);
   transition: 0.6s;
-}
+} */
 
 /*Estilos para el selector del protafolio y las skills*/
 
@@ -253,6 +263,11 @@ section {
   font-size: 1.5em;
   color: var(--dark-grey);
   text-align: center;
+}
+
+.portfolio-skills-flex-dark{
+  background-color: var(--blue-gray);
+  color: var(--light-light-grey);
 }
 
 .portfolio {
