@@ -279,10 +279,29 @@ section {
   align-items: center;
   border-radius: 10px;
   margin: 0.8em 0;
+  transition: 0.6s;
+}
+
+.portfolio:hover{
+  background-color: var(--light-background);
 }
 
 .portfolio-active {
   background-color: var(--light-light-grey);
+}
+
+/*Estilos para el modo oscuro del portafolio*/
+
+.portfolio-dark {
+  background-color: var(--blue-gray);
+}
+
+.portfolio-dark:hover{
+  background-color: var(--blue-dark);
+}
+
+.portfolio-dark-active {
+  background-color: var(--blue-dark);
 }
 
 /*Estilos para los proyectos y skills*/
@@ -299,6 +318,7 @@ section {
   background-color: var(--white);
   border-radius: 10px;
   text-align: center;
+  transition: 0.2s;
 }
 
 .project > h1 {
