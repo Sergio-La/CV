@@ -19,7 +19,7 @@ const backgroundPortfolioSkills = document.querySelector(
 );
 const btnPortfolio = document.querySelectorAll(".portfolio");
 /*contenedor donde se mostrará la spa*/
-const divSkills = document.querySelector(".projects-skills-flex");
+const sectionSkills = document.querySelector(".skills");
 
 let skillsPressed = false;
 
@@ -48,6 +48,14 @@ function toggleMode() {
   //Remover las clases de hover y active para los elementos de portfolio
   btnPortfolio[0].classList.toggle("portfolio-dark");
   // btnPortfolio[1].classList.toggle('portfolio-dark');
+
+  if (skillsPressed && btnMode.checked) {
+    const skill = document.querySelectorAll(".skill");
+    skill.forEach((e) => e.classList.add("skill-dark"));
+  } else {
+    const skill = document.querySelectorAll(".skill");
+    skill.forEach((e) => e.classList.remove("skill-dark"));
+  }
 }
 
 function skills() {
@@ -60,13 +68,66 @@ function skills() {
 
   console.log(skillsPressed);
   if (!skillsPressed) {
-    divSkills.innerHTML = `<div class="project">
-    <h1>Title</h1>
-    <p>description</p>
-  </div>`;
+    sectionSkills.innerHTML = `
+<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
+    <h3>HTML</h3>
+    <div class="skill-progress">
+        <div class="skill-fill" style="width: 75%;"></div>
+    </div>
+</div>
+
+<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
+    <h3>CSS</h3>
+    <div class="skill-progress">
+        <div class="skill-fill" style="width: 70%;"></div>
+    </div>
+</div>
+
+<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
+    <h3>Java Script</h3>
+    <div class="skill-progress">
+        <div class="skill-fill" style="width: 65%;"></div>
+    </div>
+</div>
+
+<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
+    <h3>Power Automate</h3>
+    <div class="skill-progress">
+        <div class="skill-fill" style="width: 90%;"></div>
+    </div>
+</div>
+
+<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
+    <h3>Power Apps</h3>
+    <div class="skill-progress">
+        <div class="skill-fill" style="width: 92%;"></div>
+    </div>
+</div>
+
+<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
+    <h3>Power Virtual Agents</h3>
+    <div class="skill-progress">
+        <div class="skill-fill" style="width: 75%;"></div>
+    </div>
+</div>
+
+<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
+    <h3>Dataverse</h3>
+    <div class="skill-progress">
+        <div class="skill-fill" style="width: 65%;"></div>
+    </div>
+</div>
+
+<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
+    <h3>Model Driven</h3>
+    <div class="skill-progress">
+        <div class="skill-fill" style="width: 60%;"></div>
+    </div>
+</div>
+    `;
     skillsPressed = true;
   } else {
-    divSkills.innerHTML = "";
+    sectionSkills.innerHTML = "";
     skillsPressed = false;
   }
 }
