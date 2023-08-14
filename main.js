@@ -20,11 +20,20 @@ const backgroundPortfolioSkills = document.querySelector(
 const btnPortfolio = document.querySelectorAll(".portfolio");
 /*contenedor donde se mostrará la spa*/
 const sectionSkills = document.querySelector(".skills");
+/*Seleccionar las skills*/
+const skillsElemt = document.querySelectorAll(".skill");
+/*contact-info*/
+const contact_info = document.querySelector(".contact-info");
+const btnContacme = document.querySelector("#cv-contact .download-cv:nth-child(2)");
+/*Seleccionar foorer*/
+const footer = document.querySelector("#footer");
 
 let skillsPressed = false;
+let contacmePressed = false;
 
 btnMode.addEventListener("click", toggleMode);
 btnPortfolio[0].addEventListener("click", skills);
+btnContacme.addEventListener("click", contacme);
 
 /*Función para el selector de modo*/
 function toggleMode() {
@@ -49,85 +58,47 @@ function toggleMode() {
   btnPortfolio[0].classList.toggle("portfolio-dark");
   // btnPortfolio[1].classList.toggle('portfolio-dark');
 
-  if (skillsPressed && btnMode.checked) {
-    const skill = document.querySelectorAll(".skill");
-    skill.forEach((e) => e.classList.add("skill-dark"));
-  } else {
-    const skill = document.querySelectorAll(".skill");
-    skill.forEach((e) => e.classList.remove("skill-dark"));
-  }
+  skillsElemt.forEach((e) => e.classList.toggle("skill-dark"));
+  contact_info.classList.toggle("contact-info-dark");
+  footer.classList.toggle("footer-dark");
 }
 
 function skills() {
-  //activar la clase de activo
-  // if (btnPortfolio[0].classList.contains("portfolio-dark")) {
-  //   btnPortfolio[0].classList.toggle("portfolio-dark-active");
-  // } else {
-  //   btnPortfolio[0].classList.toggle("portfolio-active");
-  // }
-
-  console.log(skillsPressed);
   if (!skillsPressed) {
-    sectionSkills.innerHTML = `
-<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
-    <h3>HTML</h3>
-    <div class="skill-progress">
-        <div class="skill-fill" style="width: 75%;"></div>
-    </div>
-</div>
+    // Agrega la clase "show" a los elementos recién creados para activar la transición
+    const skillsElements = sectionSkills.querySelectorAll(".skill");
+    skillsElements.forEach((skill) => {
+      skill.classList.add("show");
+    });
 
-<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
-    <h3>CSS</h3>
-    <div class="skill-progress">
-        <div class="skill-fill" style="width: 70%;"></div>
-    </div>
-</div>
+    sectionSkills.classList.remove("collapsed");
 
-<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
-    <h3>Java Script</h3>
-    <div class="skill-progress">
-        <div class="skill-fill" style="width: 65%;"></div>
-    </div>
-</div>
-
-<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
-    <h3>Power Automate</h3>
-    <div class="skill-progress">
-        <div class="skill-fill" style="width: 90%;"></div>
-    </div>
-</div>
-
-<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
-    <h3>Power Apps</h3>
-    <div class="skill-progress">
-        <div class="skill-fill" style="width: 92%;"></div>
-    </div>
-</div>
-
-<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
-    <h3>Power Virtual Agents</h3>
-    <div class="skill-progress">
-        <div class="skill-fill" style="width: 75%;"></div>
-    </div>
-</div>
-
-<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
-    <h3>Dataverse</h3>
-    <div class="skill-progress">
-        <div class="skill-fill" style="width: 65%;"></div>
-    </div>
-</div>
-
-<div class="skill ${btnMode.checked ? "skill-dark" : ""}">
-    <h3>Model Driven</h3>
-    <div class="skill-progress">
-        <div class="skill-fill" style="width: 60%;"></div>
-    </div>
-</div>
-    `;
     skillsPressed = true;
   } else {
-    sectionSkills.innerHTML = "";
+    // Remueve la clase "show" para ocultar los elementos con animación
+    const skillsElements = sectionSkills.querySelectorAll(".skill");
+    skillsElements.forEach((skill) => {
+      skill.classList.remove("show");
+    });
+    sectionSkills.classList.add("collapsed");
+
     skillsPressed = false;
   }
+}
+
+function contacme() {
+  if (!contacmePressed) {
+    contact_info.classList.remove("collapsed");
+    contact_info.classList.add("show");
+
+    contacmePressed = true;
+  } else {
+    contact_info.classList.add("collapsed");
+    contact_info.classList.remove("show");
+
+    contacmePressed = false;
+  }
+
+  
+console.log('clic');  
 }

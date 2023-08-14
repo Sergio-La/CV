@@ -42,13 +42,13 @@
 body {
   background-color: var(--light-background);
   font-family: "Poppins", sans-serif;
-  transition: 1s;
+  transition: 0.6s;
 }
 
 /*Modo oscuro body*/
 .body-dark {
   background-color: var(--blue-dark);
-  transition: 1s;
+  transition: 0.6s;
 }
 
 /* estilos para el selector de modo */
@@ -155,24 +155,24 @@ section {
   color: var(--dark-grey);
   font-size: 3em;
   font-weight: 400;
-  transition: 1s;
+  transition: 0.6s;
 }
 
 /*Modo oscuro*/
 .name-dark {
   color: var(--light-background);
-  transition: 1s;
+  transition: 0.6s;
 }
 
 .title {
   color: var(--light-grey);
   font-size: 1.5em;
-  transition: 1s;
+  transition: 0.6s;
 }
 
 .title-dark {
   color: var(--light-light-grey);
-  transition: 1s;
+  transition: 0.6s;
 }
 
 .redes {
@@ -193,35 +193,35 @@ section {
   font-size: 1.5em;
   color: var(--light-grey);
   text-align: center;
-  transition: 1s;
+  transition: 0.6s;
 }
 
 .experience-flex-dark {
   color: var(--light-light-grey);
-  transition: 1s;
+  transition: 0.6s;
 }
 
 /*Estilos cv-contacme*/
-#cv-contact {
+/* #cv-contact {
   display: flex;
   justify-content: center;
-}
+} */
 
-.cv-contact-flex {
-  width: 35rem;
-  margin: 1.5em 0;
-  display: flex;
-  justify-content: center;
-  gap: 38px;
-  font-size: 1.5em;
-  color: var(--dark-grey);
-  text-align: center;
+#cv-contact {
+  display: grid;
+  grid-template-columns: repeat(2, 13em);
+  grid-template-rows: 4em auto;
+  grid-template-areas:
+    "download contacme"
+    "info info";
+  font-size: 1.3em;
+  gap: 1em;
 }
 
 .download-cv {
   cursor: pointer;
-  width: 15em;
-  height: 3em;
+  width: 12.5em;
+  height: 4em;
   background-color: var(--white);
   border-radius: 10px;
   display: flex;
@@ -231,43 +231,84 @@ section {
   transition: 0.6s;
 }
 
+.cv-contact:nth-child(1) {
+  grid-area: download;
+}
+
+.cv-contact:nth-child(2) {
+  grid-area: contacme;
+}
+
 .download-cv:hover {
   background-color: #fbd760ba;
   color: var(--blue-dark);
 }
 
-.download-cv:active {
+/* .download-cv:active {
   background-color: var(--yellow);
-}
+} */
 
 .download-cv-dark {
   background-color: var(--blue-gray);
   color: var(--light-light-grey);
+  transition: 0.6s;
 }
 
-/* .download-cv-active {
-  background-color: var(--yellow);
-  transition: 0.6s;
-} */
+/*Estilos para la sección de contacto*/
+.contact-info {
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  grid-area: info;
+  font-size: 0.8em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
 
-/*Estilos para el selector del protafolio y las skills*/
+
+.contact-info-dark {
+  background-color: var(--blue-gray);
+  color: var(--light-light-grey);
+  transition: 0.6s;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.contact-info p {
+  margin: 5px 0;
+}
+
+/*Estilos para el portafolio*/
+#portfolio-skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .portfolio-skills-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   background-color: var(--white);
   border-radius: 10px;
-  width: 40rem;
-  margin: 2em 0;
-  display: flex;
-  justify-content: space-around;
+  width: 35rem;
+  margin: 1em 0;
   gap: 38px;
   font-size: 1.5em;
   color: var(--dark-grey);
   text-align: center;
+  transition: 0.6s;
 }
 
 .portfolio-skills-flex-dark {
   background-color: var(--blue-gray);
   color: var(--light-light-grey);
+  transition: 0.6s;
 }
 
 .portfolio {
@@ -290,11 +331,11 @@ section {
   background-color: var(--light-light-grey);
 }
 
-/*Estilos para el modo oscuro del portafolio*/
-
 .portfolio-dark {
   background-color: var(--blue-gray);
+  transition: 0.6s;
 }
+/*Estilos para el modo oscuro del portafolio*/
 
 .portfolio-dark:hover {
   background-color: var(--blue-dark);
@@ -304,47 +345,40 @@ section {
   background-color: var(--blue-dark);
 }
 
-/*Estilos para los proyectos y skills*/
-/* .projects-skills-flex {
-  display: grid;
-  grid-template-columns: 16em 16em;
-  grid-template-rows: 8em 8em;
-  column-gap: 2em;
-  row-gap: 2.2em;
-  margin: 2em 0;
-}
-
-.project {
-  background-color: var(--white);
-  border-radius: 10px;
-  text-align: center;
-  transition: 0.2s;
-}
-
-.project > h1 {
-  font-weight: 400;
-  font-size: 1.4em;
-  margin: 0.5em 0;
-} */
-
-/* styles.css */
 .skills {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 0.3s ease;
+}
+
+.collapsed {
+  max-height: 0;
+  z-index: -1;
 }
 
 .skill {
-  width: 42%;
+  width: 33em;
   background-color: var(--white);
   padding: 15px;
   margin-bottom: 20px;
   border-radius: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .skill-dark {
   background-color: var(--blue-gray);
   color: var(--light-light-grey);
+  transition: 0.6s;
 }
 
 .skill h3 {
@@ -373,8 +407,14 @@ footer {
   padding: 10px;
   text-align: center;
   color: var(--light-grey);
-  transition: 1s
+  transition: 0.6s;
 }
+
+.footer-dark {
+  background-color: var(--blue-dark);
+  color: var(--light-light-grey);
+}
+
 @media screen and (min-width: 481px) and (max-width: 1024px) {
   /* Estilos para tabletas y pantallas más grandes */
 }
