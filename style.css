@@ -64,7 +64,6 @@ header {
   align-items: center;
   width: 80px;
   height: 80px;
-  /* border: #e7e7e7 solid 1px; */
   border-radius: 50%;
   cursor: pointer;
 }
@@ -202,10 +201,6 @@ section {
 }
 
 /*Estilos cv-contacme*/
-/* #cv-contact {
-  display: flex;
-  justify-content: center;
-} */
 
 #cv-contact {
   display: grid;
@@ -244,10 +239,6 @@ section {
   color: var(--blue-dark);
 }
 
-/* .download-cv:active {
-  background-color: var(--yellow);
-} */
-
 .download-cv-dark {
   background-color: var(--blue-gray);
   color: var(--light-light-grey);
@@ -266,7 +257,6 @@ section {
   transform: translateY(20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 
 .contact-info-dark {
   background-color: var(--blue-gray);
@@ -345,6 +335,8 @@ section {
   background-color: var(--blue-dark);
 }
 
+/*Estilos para las skills*/
+
 .skills {
   display: flex;
   flex-direction: column;
@@ -416,9 +408,277 @@ footer {
 }
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
-  /* Estilos para tabletas y pantallas más grandes */
-}
+  /* estilos para el selector de modo */
+  header {
+    margin: 15px 0 15px 0;
+  }
 
+  .mode {
+    width: 60px;
+    height: 60px;
+  }
+
+  .sun {
+    font-size: 1.5em;
+  }
+
+  .moon {
+    font-size: 1.5em;
+  }
+
+  .toggle {
+    width: 60px;
+    height: 60px;
+  }
+
+  /*Estilos grid about me*/
+
+  .aboutme-flex {
+    width: 25em;
+    gap: 25px;
+  }
+
+  .photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .inf {
+    padding: 2.5em 0;
+  }
+
+  .name {
+    font-size: 2.2em;
+    font-weight: 400;
+  }
+
+  /*Modo oscuro*/
+
+  .title {
+    font-size: 1.2em;
+  }
+
+  .redes {
+    margin: 3px 0;
+    gap: 8px;
+  }
+
+  /*Estilos sección experiencia*/
+
+  .experience-flex {
+    width: 25rem;
+    margin: 1.5em 0;
+    gap: 60px;
+    font-size: 1.2em;
+  }
+
+  /*Estilos cv-contacme*/
+
+  #cv-contact {
+    grid-template-columns: repeat(2, 10em);
+    grid-template-rows: 2em auto;
+    font-size: 1.2em;
+    gap: 0.8em;
+  }
+
+  .download-cv {
+    width: 10em;
+    height: 3em;
+  }
+
+  /*Estilos para la sección de contacto*/
+  .contact-info {
+    padding: 10px;
+    font-size: 0.6em;
+    transform: translateY(15px);
+  }
+
+  .contact-info-dark {
+    background-color: var(--blue-gray);
+    color: var(--light-light-grey);
+  }
+
+  .contact-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .contact-info p {
+    margin: 5px 0;
+  }
+
+  /*Estilos para el portafolio*/
+
+  .portfolio-skills-flex {
+    width: 25rem;
+    margin: 1.5em 0;
+    gap: 0.8em;
+    font-size: 1.2em;
+  }
+
+  .portfolio {
+    cursor: pointer;
+    width: 52%;
+    height: 2em;
+    margin: 0.8em 0;
+  }
+  /*Estilos para las skills*/
+
+  .collapsed {
+    max-height: 0;
+    z-index: -1;
+  }
+
+  .skill {
+    width: 23em;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .skill h3 {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+  }
+
+  .skill-progress {
+    height: 8px;
+  }
+
+  /*Footer*/
+  footer {
+    font-size: 0.8em;
+  }
+}
 @media screen and (max-width: 480px) {
   /* Estilos para pantallas pequeñas */
+  /* estilos para el selector de modo */
+  header {
+    margin: 25px 0 10px 0;
+  }
+
+  .mode {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sun {
+    font-size: 1.5em;
+  }
+
+  .moon {
+    font-size: 1.5em;
+  }
+
+  .toggle {
+    width: 50px;
+    height: 50px;
+  }
+
+  /*Estilos grid about me*/
+
+  .aboutme-flex {
+    width: 20em;
+    gap: 20px;
+  }
+
+  .photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .inf {
+    padding: 2em 0;
+  }
+
+  .name {
+    font-size: 1.8em;
+    font-weight: 400;
+  }
+
+  /*Modo oscuro*/
+
+  .title {
+    font-size: 1em;
+  }
+
+  .redes {
+    margin: 3px 0;
+    gap: 5px;
+  }
+
+  /*Estilos sección experiencia*/
+
+  .experience-flex {
+    width: 20rem;
+    margin: 1.3em 0;
+    gap: 30px;
+    font-size: 1em;
+  }
+
+  /*Estilos cv-contacme*/
+
+  #cv-contact {
+    grid-template-columns: repeat(2, 10em);
+    grid-template-rows: 2em auto;
+    font-size: 1em;
+    gap: 0.8em;
+  }
+
+  .download-cv {
+    width: 10em;
+    height: 2.8em;
+  }
+
+  /*Estilos para la sección de contacto*/
+  .contact-info {
+    padding: 8px;
+    font-size: 0.6em;
+    transform: translateY(15px);
+  }
+
+  .contact-info h2 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+  .contact-info p {
+    margin: 5px 0;
+  }
+
+  /*Estilos para el portafolio*/
+
+  .portfolio-skills-flex {
+    width: 21rem;
+    margin: 1.5em 0;
+    gap: 0.8em;
+    font-size: 1em;
+  }
+
+  .portfolio {
+    cursor: pointer;
+    width: 50%;
+    height: 2.2em;
+    margin: 0.8em 0;
+  }
+  /*Estilos para las skills*/
+
+  .skill {
+    width: 20em;
+    padding: 10px;
+    margin-bottom: 15px;
+  }
+
+  .skill h3 {
+    font-size: 0.6em;
+    margin-bottom: 10px;
+  }
+
+  .skill-progress {
+    height: 8px;
+  }
+
+  /*Footer*/
+  footer {
+    font-size: 0.5em;
+  }
 }
