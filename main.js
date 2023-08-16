@@ -35,6 +35,10 @@ btnMode.addEventListener("click", toggleMode);
 btnPortfolio[0].addEventListener("click", skills);
 btnContacme.addEventListener("click", contacme);
 
+btnDowCont[0].addEventListener("click", function () {
+  window.location.href = "./recursos/SERGIO LUIS LÓPEZ ATENCIO.pdf"
+})
+
 /*Función para el selector de modo*/
 function toggleMode() {
   body.classList.toggle("body-dark");
