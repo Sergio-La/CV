@@ -36,7 +36,7 @@ btnPortfolio[0].addEventListener("click", skills);
 btnContacme.addEventListener("click", contacme);
 
 btnDowCont[0].addEventListener("click", function () {
-  window.location.href = "./recursos/SERGIO LUIS LÓPEZ ATENCIO.pdf"
+  window.location.href = "./recursos/SERGIO LOPEZ.pdf"
 })
 
 /*Función para el selector de modo*/
